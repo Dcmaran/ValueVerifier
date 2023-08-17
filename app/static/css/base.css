@@ -1,11 +1,11 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
 }
 
 .top-bar {
-    background-color: #888888;
+    background-color: #3a3838;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,6 +17,8 @@ body {
     text-decoration: none;
     color: white;
     font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 .nav-links a:hover {
@@ -25,4 +27,27 @@ body {
 
 .content {
     padding: 20px;
+}
+
+.welcome-title {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.description {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    line-height: 1.5; 
+    font-size: 16px;
+    font-weight: lighter;
 }

@@ -5,7 +5,7 @@ body {
 }
 
 .top-bar {
-    background-color: #888888;
+    background-color: #3a3838;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,6 +17,8 @@ body {
     text-decoration: none;
     color: white;
     font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 .nav-links a:hover {
