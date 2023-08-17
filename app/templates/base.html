@@ -4,15 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'base.css'%}">
+    <link rel="stylesheet" href="{% static 'css/base.css'%}">
     <title>ValueVerifier</title>
 </head>
 <body>
     <div class="top-bar">
-        <ul>
-            <a href="">ValueVerifier</a>
-            <a href="https://google.com">Converter</a>
-        </ul>
+        <div class="logo">
+            <a href="/">ValueVerifier</a>
+        </div>
+        <div class="nav-links">
+            <a href="https://google.com" target="_blank">Converter</a>
+        </div>
     </div>
     <div class="content">
         {% block content%}{% endblock %}
