@@ -1,0 +1,49 @@
+# Arquivos e diretórios padrão a serem ignorados por um projeto Django
+
+# Arquivos de configuração
+*.pyc
+*.pyo
+__pycache__/
+
+# Arquivos de mídia
+media/
+
+# Arquivos de banco de dados SQLite
+*.sqlite3
+
+# Arquivos de registro
+*.log
+
+# Arquivos gerados por IDEs e editores de código
+.vscode/
+.idea/
+
+# Ambiente virtual
+venv/
+env/
+
+# Arquivos de backup
+*.bak
+*.swp
+
+# Arquivos de cache
+*.cache/
+
+# Arquivos de configuração de produção sensíveis
+settings_local.py
+*.env
+
+# Dependências Python (você pode ajustar isso dependendo do gerenciador de pacotes que você usa)
+# Por exemplo, para projetos que usam pipenv:
+Pipfile
+Pipfile.lock
+
+# Arquivos de build e distribuição
+build/
+dist/
+*.egg-info/
+
+# Arquivos de node.js
+node_modules/
+package-lock.json
+yarn.lock
