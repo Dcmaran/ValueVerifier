@@ -12,11 +12,18 @@ body {
     padding: 14px 20px;
 }
 
-.logo a,
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
 .nav-links a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }

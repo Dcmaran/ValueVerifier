@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <head>
+        <link rel="stylesheet" href="{% static 'css/converter.css'%}">
+    </head>
+
+    <div class="container">
+        <h1>Conversor de Moedas</h1>
+        <form id="currency-converter">
+          <label for="amount">Valor:</label>
+          <input type="number" id="amount" placeholder="Digite o valor">
+      
+          <label for="from">De:</label>
+          <select id="from">
+            <option value="BRL" selected>Real (BRL)</option>
+            <option value="usd">Dólar Americano (USD)</option>
+            <option value="eur">Euro (EUR)</option>
+            <!-- Adicione mais opções de moedas aqui -->
+          </select>
+      
+          <label for="to">Para:</label>
+          <select id="to">
+            <option value="brl">Real Brasileiro (BRL)</option>
+            <option value="gbp">Libra Esterlina (GBP)</option>
+            <!-- Adicione mais opções de moedas aqui -->
+          </select>
+      
+          <button type="button" onclick="convertCurrency()">Converter</button>
+          <p id="result"></p>
+        </form>
+      </div>
+{% endblock %}
