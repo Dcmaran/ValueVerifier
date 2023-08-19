@@ -15,20 +15,35 @@
           
                 <label for="from">De:</label>
                 <select id="from">
-                    <option value="BRL" selected>Real (BRL)</option>
-                    <option value="usd">Dólar Americano (USD)</option>
-                    <option value="eur">Euro (EUR)</option>
+                    <option value="BRL" selected>Real Brasileiro (BRL)</option>
+                    <option value="USD">Dólar Americano (USD)</option>
+                    <option value="EUR">Euro (EUR)</option>
+                    <option value="GBP">Libra Esterlina (GBP)</option>
                 </select>
           
                 <label for="to">Para:</label>
                 <select id="to">
-                    <option value="brl">Real Brasileiro (BRL)</option>
-                    <option value="gbp">Libra Esterlina (GBP)</option>
+                    <option value="BRL">Real Brasileiro (BRL)</option>
+                    <option value="USD" selected>Dólar Americano (USD)</option>
+                    <option value="EUR">Euro (EUR)</option>
+                    <option value="GBP">Libra Esterlina (GBP)</option>
                 </select>
-          
+                
+                <button type="button" id="swap-button" onclick="swapCurrencies()">Trocar</button>
                 <button type="button" onclick="convertCurrency()">Converter</button>
                 <p id="result"></p>
             </form>
         </div>
     </div>
+
+    <script>
+        function swapCurrencies() {
+            const fromCurrency = document.getElementById("from");
+            const toCurrency = document.getElementById("to");
+
+            const temp = fromCurrency.value;
+            fromCurrency.value = toCurrency.value;
+            toCurrency.value = temp;
+        }
+    </script>
 {% endblock %}

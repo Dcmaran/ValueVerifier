@@ -20,7 +20,16 @@ label {
   margin-bottom: 8px;
 }
 
-input[type="number"],
+input[id="amount"]{
+  width: 282.4px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 select,
 button {
   margin-top: 12px;
