@@ -9,7 +9,9 @@
     <div class="centered-content">
         <div class="container">
             <h1>Conversor de Moedas</h1>
-            <form id="currency-converter">
+            <form id="currency-converter" method="post">
+                    {% csrf_token %}
+                    {{ form }}
                 <label for="amount">Valor:</label>
                 <input type="number" id="amount" placeholder="Digite o valor">
           
