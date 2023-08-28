@@ -1,6 +1,17 @@
 from django import forms
 
+
 class ConversionForm(forms.Form):
-    input = forms.DecimalField(max_digits=10, decimal_places=2)
-    currency = forms.CharField(max_length=3)
-    converted_currency = forms.CharField(max_length=3)
+    amount = forms.DecimalField(label='Valor', widget=forms.NumberInput(attrs={'id': 'amount'}))
+    from_currency = forms.ChoiceField(choices=[
+        ('BRL', 'Real Brasileiro (BRL)'),
+        ('USD', 'Dólar Americano (USD)'),
+        ('EUR', 'Euro (EUR)'),
+        ('GBP', 'Libra Esterlina (GBP)'),
+    ], label='De:', widget=forms.Select(attrs={'class': 'from_currency'}))
+    to_currency = forms.ChoiceField(choices=[
+        ('BRL', 'Real Brasileiro (BRL)'),
+        ('USD', 'Dólar Americano (USD)'),
+        ('EUR', 'Euro (EUR)'),
+        ('GBP', 'Libra Esterlina (GBP)'),
+    ], label='Para:', widget=forms.Select(attrs={'class': 'to_value'}))

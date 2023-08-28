@@ -49,3 +49,15 @@ button {
   border: none;
   cursor: pointer;
 }
+
+result {
+  margin-top: 12px;
+  text-align: center;
+  width: 300px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
