@@ -8,12 +8,12 @@
 
     <div class="centered-content">
         <div class="container">
-            <h1>Conversor de Moedas</h1>
+            <h1 id="main-c-title">Converter</h1>
             <form id="currency-converter" method="post">
                     {% csrf_token %}
                     {{ form.as_p }}
-                <button type="button" id="swap-button" onclick="swapCurrencies()">Trocar</button>
-                <button type="submit">Converter</button>
+                <button type="button" id="swap-button" onclick="swapCurrencies()">Swap</button>
+                <button type="submit">Convert now</button>
             </form>
             {% if conversion %}
                 <h1>{{ result }} {{ to }}</h1>
@@ -31,13 +31,13 @@
         let timer = 0;
 
         function swapCurrencies() {
-            const fromCurrency = document.getElementById("from");
-            const toCurrency = document.getElementById("to");
+        const fromCurrency = document.querySelector(".from_currency");
+        const toCurrency = document.querySelector(".to_value");
 
-            const temp = fromCurrency.value;
-            fromCurrency.value = toCurrency.value;
-            toCurrency.value = temp;
-        }
+        const temp = fromCurrency.value;
+        fromCurrency.value = toCurrency.value;
+        toCurrency.value = temp;
+}
 
         function updateTimer() {
             timer++;

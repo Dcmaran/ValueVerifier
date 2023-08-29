@@ -12,11 +12,18 @@ body {
     padding: 14px 20px;
 }
 
-.logo a,
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
 .nav-links a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
@@ -43,7 +50,7 @@ body {
 }
 
 .description {
-    max-width: 800px;
+    max-width: 850px;
     margin: 20px auto;
     padding: 10px;
     text-align: center;
@@ -53,7 +60,15 @@ body {
 }
 
 body {
-    background-image: url('{% static "img/bg.png" %}');
+    background-image: url('../img/bg.png');
     background-size: cover;
     background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.white-background {
+    background-color: white;
+    padding: 20px; /* Adapte o valor de padding conforme necessário */
+    border-radius: 10px; /* Adicione bordas arredondadas para estética */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adicione uma sombra para dar profundidade */
 }

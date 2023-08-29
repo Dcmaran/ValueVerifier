@@ -87,3 +87,8 @@ button {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+#main-c-title {
+  padding: 10px;
+  border-bottom: solid #007bff 2px;
+}
