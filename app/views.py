@@ -27,17 +27,14 @@ def converter(request):
                 converted_currency=form.cleaned_data['to_currency']
             )
 
+            result = convert(form.cleaned_data['from_currency'], form.cleaned_data['to_currency'], amount)
+            conversion_date = conversion.date.strftime('%d/%m/%Y %H:%M')
+
             conversion.save()
 
-            return render(request, 'converter.html', {'form': form, 'conversion': conversion})
+            return render(request, 'converter.html', {'form': form, 'conversion': conversion, 'result': result, 'to': form.cleaned_data['to_currency'], 'conversion_date': conversion_date})
     else:
         form = ConversionForm()
 
     return render(request, 'converter.html', {'form': form})
 
-
-def get_last_conversion_value(request):
-    last_conversion = Conversion.objects.latest('date')
-
-    result = last_conversion.output
-    return render(request, 'converter.html', {'result': result})
