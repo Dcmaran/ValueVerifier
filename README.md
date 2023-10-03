@@ -42,7 +42,7 @@ pip install virtualenv
 venv\Scripts\activate
 ```
 
-- On macOS and Linux:
+- On MacOS and Linux:
 ```bash
 source venv/bin/activate
 ```
