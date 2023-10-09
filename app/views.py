@@ -28,7 +28,8 @@ def converter(request):
             )
 
             result = convert(form.cleaned_data['from_currency'], form.cleaned_data['to_currency'], amount)
-            conversion_date = conversion.date.strftime('%d/%m/%Y %H:%M')
+            conversion_date = conversion.date.astimezone(timezone.get_current_timezone()).strftime('%d/%m/%Y %H:%M')
+
 
             conversion.save()
 

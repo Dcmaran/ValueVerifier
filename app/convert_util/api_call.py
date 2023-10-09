@@ -15,5 +15,3 @@ def convert(from_currency, to_currency, amount):
         return http.HttpResponseBadRequest('Valor inválido')
     except TypeError:
         return http.HttpResponseBadRequest('Valor inválido')
-
-print(convert('BRL', 'USD', 100))
